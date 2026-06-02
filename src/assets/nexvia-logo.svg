@@ -1,0 +1,27 @@
+<svg width="720" height="360" viewBox="0 0 720 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hexGradient" x1="190" y1="24" x2="520" y2="292" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1767C8"/>
+      <stop offset="1" stop-color="#0E4DAA"/>
+    </linearGradient>
+    <linearGradient id="hexShadow" x1="246" y1="104" x2="402" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D47A1" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#0D47A1" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="letterFill" x1="290" y1="104" x2="408" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9E6FB"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M360 22C367.7 22 375.3 23.9 382.1 27.8L490.2 90.2C504.1 98.2 512.7 113 512.7 129V253C512.7 269 504.1 283.8 490.2 291.8L382.1 354.2C375.3 358.1 367.7 360 360 360C352.3 360 344.7 358.1 337.9 354.2L229.8 291.8C215.9 283.8 207.3 269 207.3 253V129C207.3 113 215.9 98.2 229.8 90.2L337.9 27.8C344.7 23.9 352.3 22 360 22Z" fill="url(#hexGradient)"/>
+  <path d="M219.5 248.4L360 171.7L500.5 248.4V253C500.5 264.6 494.3 275.4 484.2 281.2L376.1 343.6C371.1 346.5 365.5 348 360 348C354.5 348 348.9 346.5 343.9 343.6L235.8 281.2C225.7 275.4 219.5 264.6 219.5 253V248.4Z" fill="url(#hexShadow)"/>
+
+  <path d="M292 107C294.4 96.3 303.9 88.7 314.8 88.7H346.5C353.4 88.7 359.7 92.7 362.8 98.8L401.5 175.2L413 113.1C415 99.8 426.4 90 439.9 90H449.5C462.6 90 472.5 101.9 469.9 114.7L450.1 213.6C447.7 225.6 437.2 234.2 425 234.2H397.7C390.4 234.2 383.7 229.9 380.8 223.2L342.2 141.1L326.5 222.1C324.3 233.4 314.4 241.6 302.9 241.6H278.5L292 107Z" fill="url(#letterFill)"/>
+  <path d="M455 94H487V126H455V94Z" fill="#FFFFFF"/>
+  <path d="M495 109H519V133H495V109Z" fill="#1A75D1"/>
+  <path d="M475 131H499V155H475V131Z" fill="#FFFFFF"/>
+
+  <text x="360" y="296" text-anchor="middle" fill="#135CC1" font-size="46" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Nexvia Solutions</text>
+  <text x="360" y="330" text-anchor="middle" fill="#7084AA" font-size="22" font-style="italic" font-family="Segoe UI, Arial, sans-serif">Simplifiez la gestion RH</text>
+</svg>

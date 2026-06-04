@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const apiBaseUrl = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'development' ? 'http://localhost:8000' : 'https://economist-valid-estimator.ngrok-free.dev');
 const api = axios.create({
   baseURL: apiBaseUrl + '/api',
 });

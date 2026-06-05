@@ -12,14 +12,24 @@ export default function NewRequest() {
     reason: ''
   })
   const [leaveTypes, setLeaveTypes] = useState([])
+  const [leaveTypesError, setLeaveTypesError] = useState('')
+  const [leaveTypesLoading, setLeaveTypesLoading] = useState(true)
   const [nbDays, setNbDays] = useState(0)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
   useEffect(() => {
+    setLeaveTypesLoading(true)
+    setLeaveTypesError('')
+
     api.get('/leave-types')
       .then(res => setLeaveTypes(res.data.data || []))
-      .catch(() => toast.error('Erreur chargement types'))
+      .catch((err) => {
+        console.error('Leave types load error:', err)
+        setLeaveTypesError('Impossible de charger les types de congé. Vérifiez l’accès à l’API.')
+        toast.error('Erreur chargement types')
+      })
+      .finally(() => setLeaveTypesLoading(false))
   }, [])
 
   useEffect(() => {
@@ -94,14 +104,22 @@ export default function NewRequest() {
                 value={form.leave_type_id}
                 onChange={handleChange}
                 required
+                disabled={leaveTypesLoading || !!leaveTypesError}
               >
-                <option value="">-- Sélectionner un type --</option>
+                <option value="">
+                  {leaveTypesLoading ? 'Chargement des types...' : leaveTypesError ? 'Erreur de chargement' : '-- Sélectionner un type --'}
+                </option>
                 {leaveTypes.map(lt => (
                   <option key={lt.id} value={lt.id}>
                     {lt.name}
                   </option>
                 ))}
               </select>
+              {leaveTypesError && (
+                <div style={{ color: '#c62828', marginTop: '8px', fontSize: '14px' }}>
+                  {leaveTypesError}
+                </div>
+              )}
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
